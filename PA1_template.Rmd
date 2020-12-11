@@ -78,7 +78,7 @@ max_int <- infile_int_time_series[infile_int_time_series$steps == max(infile_int
 ## Imputing missing values
 
 ```{r}
-missing_records <- length(is.na(infile))
+missing_records <- sum(is.na(infile)*1)
 ```
 1. There are `r missing_records` rows that have NA steps in the data.
 

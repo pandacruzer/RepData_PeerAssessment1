@@ -422,9 +422,9 @@ plot(infile_int_time_series, type = &#39;l&#39;)</code></pre>
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
-<pre class="r"><code>missing_records &lt;- length(is.na(infile))</code></pre>
+<pre class="r"><code>missing_records &lt;- sum(is.na(infile)*1)</code></pre>
 <ol style="list-style-type: decimal">
-<li><p>There are 52704 rows that have NA steps in the data.</p></li>
+<li><p>There are 2304 rows that have NA steps in the data.</p></li>
 <li><p>Interval is more indicative of step count than date, so we will impute missing values by using the interval mean</p></li>
 </ol>
 <pre class="r"><code>infile_na &lt;- infile[is.na(infile$steps) == TRUE,]
